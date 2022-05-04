@@ -2,8 +2,8 @@
 function Repository(props) {
   return (
     <li>
-        <div>Nombre: {props.repository.name}</div>
-        <div>Descripción: {props.repository.description}</div>
+        <div>{props.repository.name}</div>
+        <div>{props.repository.description}</div>
     </li>
   );
 }

@@ -2,11 +2,11 @@ import "../styles/App.scss";
 import { useEffect, useState } from "react";
 import callToApi from "../services/api";
 import ListRepositories from "./ListRepositories";
+import Filter from "./Filter";
 
 function App() {
-  // api
-
   const [repositories, setRepositories] = useState([]);
+  const [filterText, setFilterText] = useState("");
 
   useEffect(() => {
     callToApi().then((response) => {
@@ -14,16 +14,29 @@ function App() {
     });
   }, []);
 
-  console.log(repositories);
+  const handleFilterText = (ev) => {
+    setFilterText(ev.currentTarget.value);
+  };
+
+  
 
   return (
     // HTML ✨
 
-    <div>
-      <h1>Buscador Repos</h1>
-
-      <ListRepositories repositories={repositories} />
-    </div>
+    <>
+      <header>
+        <h1>Buscador Repos</h1>
+      </header>
+      <main>
+        <Filter
+          handleFilterText={handleFilterText}
+        />
+        <ListRepositories 
+        repositories={repositories} 
+        filterText={filterText}
+        />
+      </main>
+    </>
   );
 }
 
