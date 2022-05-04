@@ -1,34 +1,29 @@
-import '../styles/App.scss';
-import { useEffect, useState } from 'react';
-//import callToApi from '../services/api';
+import "../styles/App.scss";
+import { useEffect, useState } from "react";
+import callToApi from "../services/api";
+import ListRepositories from "./ListRepositories";
 
 function App() {
-  
   // api
 
-  //const [data, setData] = useState({});
+  const [repositories, setRepositories] = useState([]);
 
-  /*
   useEffect(() => {
     callToApi().then((response) => {
-      data(response);
+      setRepositories(response);
     });
   }, []);
-  */
 
-  /*
-  useEffect(() => {
-    localStorage.set('name', name);
-    localStorage.set('email', email);
-  }, [name, email]);
-  */
-
-
+  console.log(repositories);
 
   return (
     // HTML ✨
 
-    <div className="app">Hola Mundo!</div>
+    <div>
+      <h1>Buscador Repos</h1>
+
+      <ListRepositories repositories={repositories} />
+    </div>
   );
 }
 
