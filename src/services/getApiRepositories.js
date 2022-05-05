@@ -1,5 +1,5 @@
-const getApiRepositories = () => {
-  return fetch("https://api.github.com/users/mireiasuefra/repos")
+const getApiRepositories = (userName) => {
+  return fetch(`https://api.github.com/users/${userName}/repos`)
     .then((response) => response.json())
     .then((data) => {
       return data.map((repo) => {
