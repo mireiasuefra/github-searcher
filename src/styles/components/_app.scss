@@ -1,4 +1,7 @@
-.bg-main {
+.main {
+  font-family: $body-font;
   background-color: #22272e;
   color: rgb(205, 217, 229);
+  padding: 20px;
+  min-height: 100vh;
 }

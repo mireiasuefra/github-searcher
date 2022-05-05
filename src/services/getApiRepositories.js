@@ -1,4 +1,4 @@
-const callToApi = () => {
+const getApiRepositories = () => {
   return fetch("https://api.github.com/users/mireiasuefra/repos")
     .then((response) => response.json())
     .then((data) => {
@@ -7,11 +7,12 @@ const callToApi = () => {
           id: repo.id,
           name: repo.name,
           description: repo.description,
+          url: repo.html_url,
         };
       });
     });
 };
 
-export default callToApi;
+export default getApiRepositories;
 
 

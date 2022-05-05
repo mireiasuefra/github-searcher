@@ -3,9 +3,7 @@ import { SearchIcon } from '@primer/octicons-react'
 
 function Filter(props) {
     return (
-    <div>
-      <form>
-        <label htmlFor="name">Repository: </label>
+      <form className="filter">
         <TextInput
           block 
           aria-label="Input to find a repository"
@@ -15,7 +13,6 @@ function Filter(props) {
           onChange={props.handleFilterText}
         />
       </form>
-    </div>
   );
 }
 

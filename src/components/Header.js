@@ -9,7 +9,7 @@ function Header() {
         <PrimerHeader.Item full>
           <PrimerHeader.Link href="#" fontSize={2}>
             <StyledOcticon icon={MarkGithubIcon} size={32} sx={{ mr: 2 }} />
-            <span>GitHub searcher</span>
+            <span className="header__title">GitHub Searcher</span>
           </PrimerHeader.Link>
         </PrimerHeader.Item>
         <PrimerHeader.Item mr={0}>

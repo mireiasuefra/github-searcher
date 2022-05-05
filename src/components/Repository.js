@@ -1,11 +1,17 @@
+import { Link } from "@primer/react";
 
 function Repository(props) {
   return (
     <li className="repository">
-        <div className="repository__name">{props.repository.name}</div>
-        <div  className="repository__description">{props.repository.description}</div>
+      <Link href={props.repository.url} target="_blank">
+        {props.repository.name}
+      </Link>
+      <div className="repository__description">
+        {props.repository.description}
+      </div>
     </li>
   );
 }
 
 export default Repository;
+

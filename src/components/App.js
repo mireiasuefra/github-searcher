@@ -1,6 +1,6 @@
 import "../styles/App.scss";
 import { useEffect, useState } from "react";
-import callToApi from "../services/api";
+import getApiRepositories from "../services/getApiRepositories";
 import ListRepositories from "./ListRepositories";
 import Filter from "./Filter";
 import Header from "./Header";
@@ -10,7 +10,7 @@ function App() {
   const [filterText, setFilterText] = useState("");
 
   useEffect(() => {
-    callToApi().then((response) => {
+    getApiRepositories().then((response) => {
       setRepositories(response);
     });
   }, []);
@@ -24,7 +24,7 @@ function App() {
 
     <>
       <Header/>
-      <main className="bg-main">
+      <main className="main">
         <Filter handleFilterText={handleFilterText} />
         <ListRepositories repositories={repositories} filterText={filterText} />
       </main>
