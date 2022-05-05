@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import callToApi from "../services/api";
 import ListRepositories from "./ListRepositories";
 import Filter from "./Filter";
+import Header from "./Header";
 
 function App() {
   const [repositories, setRepositories] = useState([]);
@@ -24,9 +25,9 @@ function App() {
     // HTML ✨
 
     <>
-      <header>
-        <h1>Buscador Repos</h1>
-      </header>
+      <Header/>
+        
+      
       <main>
         <Filter
           handleFilterText={handleFilterText}

@@ -1,16 +1,17 @@
+import { TextInput } from '@primer/react'
+import { SearchIcon } from '@primer/octicons-react'
+
 function Filter(props) {
-  
-
-
     return (
     <div>
       <form>
         <label htmlFor="name">Repository: </label>
-        <input
-          type="text"
+        <TextInput
+          block 
+          aria-label="Input to find a repository"
+          trailingVisual={SearchIcon}
           name="name"
-          id="name"
-          placeholder="Find a repository"
+          placeholder="Find a repository..."
           onChange={props.handleFilterText}
         />
       </form>
