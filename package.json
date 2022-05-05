@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@primer/css": "^20.0.0",
     "@primer/octicons-react": "^17.0.0",
     "@primer/react": "^35.2.1",
     "@testing-library/jest-dom": "^5.16.1",

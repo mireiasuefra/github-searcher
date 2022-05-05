@@ -1,0 +1,19 @@
+.repository {
+    border: 1px solid #2D333B;
+    font-family: $body-font;
+
+    &__name{
+        color: $repo-name;
+
+    }
+
+    &__description{
+        color: $repo-desc;
+
+    }
+
+    
+
+
+
+}

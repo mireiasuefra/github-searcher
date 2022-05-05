@@ -1,9 +1,9 @@
 
 function Repository(props) {
   return (
-    <li>
-        <div>{props.repository.name}</div>
-        <div>{props.repository.description}</div>
+    <li className="repository">
+        <div className="repository__name">{props.repository.name}</div>
+        <div  className="repository__description">{props.repository.description}</div>
     </li>
   );
 }

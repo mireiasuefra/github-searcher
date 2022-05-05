@@ -19,23 +19,14 @@ function App() {
     setFilterText(ev.currentTarget.value);
   };
 
-  
-
   return (
     // HTML ✨
 
     <>
       <Header/>
-        
-      
-      <main>
-        <Filter
-          handleFilterText={handleFilterText}
-        />
-        <ListRepositories 
-        repositories={repositories} 
-        filterText={filterText}
-        />
+      <main className="bg-main">
+        <Filter handleFilterText={handleFilterText} />
+        <ListRepositories repositories={repositories} filterText={filterText} />
       </main>
     </>
   );
