@@ -12,8 +12,8 @@ function ListRepositories(props) {
     });
 
     if (filtered.length > 0) {
-      return filtered.map((oneRepository, index) => {
-        return <Repository key={index} repository={oneRepository} />;
+      return filtered.map((oneRepository) => {
+        return <Repository key={oneRepository.id} repository={oneRepository} />;
       });
     } else {
       return (
@@ -25,8 +25,8 @@ function ListRepositories(props) {
   };
 
   return (
-    <section className="list-repositories">
-      <ul className="list-repositories__list">{renderRepositories()}</ul>
+    <section>
+      <ul>{renderRepositories()}</ul>
     </section>
   );
 }

@@ -15,17 +15,11 @@ function App() {
     });
   }, []);
 
-  const handleFilterText = (ev) => {
-    setFilterText(ev.currentTarget.value);
-  };
-
   return (
-    // HTML ✨
-
     <>
       <Header/>
       <main className="main">
-        <Filter handleFilterText={handleFilterText} />
+        <Filter setFilterText={setFilterText} />
         <ListRepositories repositories={repositories} filterText={filterText} />
       </main>
     </>

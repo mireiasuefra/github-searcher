@@ -1,13 +1,12 @@
 import { Header as PrimerHeader, Avatar, StyledOcticon } from "@primer/react";
 import { MarkGithubIcon } from '@primer/octicons-react'
 
-
 function Header() {
   return (
     <>
       <PrimerHeader>
         <PrimerHeader.Item full>
-          <PrimerHeader.Link href="#" fontSize={2}>
+          <PrimerHeader.Link href="https://github.com/mireiasuefra" fontSize={2}>
             <StyledOcticon icon={MarkGithubIcon} size={32} sx={{ mr: 2 }} />
             <span className="header__title">GitHub Searcher</span>
           </PrimerHeader.Link>

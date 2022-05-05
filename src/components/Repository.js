@@ -1,13 +1,15 @@
 import { Link } from "@primer/react";
 
 function Repository(props) {
+  const { name, url, description } = props.repository;
+
   return (
     <li className="repository">
-      <Link href={props.repository.url} target="_blank">
-        {props.repository.name}
+      <Link href={url} target="_blank">
+        {name}
       </Link>
       <div className="repository__description">
-        {props.repository.description}
+        {description}
       </div>
     </li>
   );
