@@ -4,6 +4,8 @@
 
 This is an application where you can search for my Github repositories.
 
+https://mireiasuefra.github.io/github-searcher/
+
 ## Built with 🚀
 
 * [React](https://reactjs.org) as a javascript library.
