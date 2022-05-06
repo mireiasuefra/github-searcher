@@ -31,7 +31,7 @@ function App() {
       <Header user={user} />
       <main className="main">
         {user ? <User user={user} /> : null}
-        <section>
+        <section className="main__searcher">
           <Filter setFilterText={setFilterText} />
           <ListRepositories
             repositories={repositories}

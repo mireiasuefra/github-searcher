@@ -4,15 +4,11 @@
   flex-direction: column;
   align-items: center;
 
-  &__name {
-      
-    align-items:initial;
-  }
-
   &__img {
     border-radius: 50%;
     width: 100%;
     max-width: 200px;
+    padding-bottom: 10px;
   }
 
   &__bio {

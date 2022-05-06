@@ -25,9 +25,7 @@ function ListRepositories(props) {
   };
 
   return (
-    <section>
-      <ul>{renderRepositories()}</ul>
-    </section>
+    <ul>{renderRepositories()}</ul>
   );
 }
 

@@ -8,7 +8,7 @@ function Filter(props) {
   };
 
   return (
-    <form className="filter">
+    <form>
       <TextInput
         block
         aria-label="Input to find a repository"

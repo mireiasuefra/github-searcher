@@ -1,14 +1,23 @@
 .main {
   font-family: $body-font;
-  background-color: #22272e;
-  color: rgb(205, 217, 229);
+  background-color: $color-background;
+  color: $color-font;
   padding: 20px;
   min-height: 100vh;
 
   display: flex;
   flex-direction: column;
-
+  
   @media (min-width: $breakpoint-tablet) {
     flex-direction: row;
+  }
+
+  &__searcher {
+    width: 100%;
+    min-height: 200px;
+  
+    @media (min-width: $breakpoint-tablet) {
+      margin-left: 20px;
+    }
   }
 }

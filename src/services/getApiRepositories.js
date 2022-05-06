@@ -14,7 +14,3 @@ const getApiRepositories = (userName) => {
 };
 
 export default getApiRepositories;
-
-//TODO: añadir url publica 
-
-
