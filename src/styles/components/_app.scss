@@ -4,4 +4,11 @@
   color: rgb(205, 217, 229);
   padding: 20px;
   min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+  }
 }

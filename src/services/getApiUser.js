@@ -3,11 +3,12 @@ const getApiUser = (userName) => {
     .then((response) => response.json())
     .then((user) => {
       return {
-        avatar_url: user.avatar_url,
+        avatarUrl: user.avatar_url,
         name: user.name,
         url: user.html_url,
         bio: user.bio,
         linkedin: user.blog,
+        login: user.login
       };
     });
 };

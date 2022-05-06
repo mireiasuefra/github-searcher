@@ -5,13 +5,14 @@ import getApiUser from "../services/getApiUser";
 import ListRepositories from "./ListRepositories";
 import Filter from "./Filter";
 import Header from "./Header";
+import User from "./User";
 
 const userName = "mireiasuefra";
 
 function App() {
   const [repositories, setRepositories] = useState([]);
   const [filterText, setFilterText] = useState("");
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     getApiRepositories(userName).then((response) => {
@@ -23,16 +24,20 @@ function App() {
     });
   }, []);
 
-
-  console.log(user)
-
+  console.log(user);
 
   return (
     <>
-      <Header/>
+      <Header user={user} />
       <main className="main">
-        <Filter setFilterText={setFilterText} />
-        <ListRepositories repositories={repositories} filterText={filterText} />
+        {user ? <User user={user} /> : null}
+        <section>
+          <Filter setFilterText={setFilterText} />
+          <ListRepositories
+            repositories={repositories}
+            filterText={filterText}
+          />
+        </section>
       </main>
     </>
   );
